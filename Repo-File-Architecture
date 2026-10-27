@@ -1,0 +1,35 @@
+# Sair-Lean4: Formal Verification Template for Modified Loop Quantum Gravity & Cosmology
+
+This repository provides a modular Lean 4 formalization template for verifying alternative geometric quantization schemes against standard Loop Quantum Gravity (LQG) and Loop Quantum Cosmology (LQC) foundations. 
+
+Specifically, this template establishes the formal boilerplate to test whether an alternative discrete space-map architecture (such as the 12-valent dodecagonal `dod3` framework scaled by the golden ratio $\phi$) mathematically converges with, or departs from, standard published derivations (Ashtekar–Singh 2011, Rovelli–Vidotto 2014, Bekenstein 1973).
+
+---
+
+## 📂 Repository Structure
+
+```text
+sair-lean4-submission/
+├── lean/
+│   ├── Constants.lean         # Physical constants, Planck units, and golden ratio definitions ($\phi$)
+│   ├── AreaOperator.lean      # Standard LQG area spectrum vs. dod3 face area eigenvalue proofs
+│   ├── BigBounce.lean         # LQC density bound ($\rho_{\text{crit}} \approx 0.41 \rho_{\text{Planck}}$) and Span of Zero buffer
+│   └── Entropy.lean           # Microstate counting transitions ($W = 2^n$ vs. $W \propto \phi^N$)
+├── docs/
+│   ├── definitions.md         # Formal mathematical definitions of private notation (GRU, dod3, etc.)
+│   └── derivation_notes.md    # Working notes on the 12-edge area and Immirzi parameter ($\gamma$) mapping
+├── README.md                  # Project overview and verification guide
+└── lakefile.lean              # Lean 4 build configuration
+
+
+
+sair-lean4-submission/
+├── lakefile.lean             # Lean 4 project configuration file
+├── lean/
+│   ├── Constants.lean        # Physical and golden ratio constants (phi, l_P, t_P, GRU baselines)
+│   ├── AreaOperator.lean     # Standard LQG area spectrum vs. dod3 face area eigenvalue proofs
+│   ├── BigBounce.lean        # LQC density bound and Span of Zero buffer dynamics
+│   └── Entropy.lean          # Microstate scaling transitions (W = 2^n vs. W \propto \phi^N)
+└── docs/
+    ├── definitions.md        # Formal domain/codomain specifications for the private notation layer
+    └── derivation_notes.md   # Working algebra notes for the Immirzi parameter ($\gamma$) derivation
